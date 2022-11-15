@@ -106,6 +106,22 @@ section img{
     
 }
 
+#touchscreen {
+    position: absolute;
+    top: 30vh;
+    left: 3vh;
+    height: 13vh;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 2000;
+    animation-name: touch;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: all 0.3s ease-in-out;
+    animation-delay: 2.5s;
+}
+
 .pulse-brilho {
     animation: pulse-brilho .7s infinite;
     animation-duration: 0.3s;
@@ -119,6 +135,20 @@ section img{
 }
 @keyframes pulse-brilho{0%{transform:scale(1);filter:brightness(80%)}to{transform:scale(1.1);filter:brightness(100%)}}
 
+@keyframes touch {
+    0% {
+      transform: translateY(0%);
+      opacity: 0;
+    }
+    50%{
+      transform: translateY(30%);
+      opacity: 100;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 0;
+    }
+  }
 
 @keyframes moedas {
     0% {
@@ -162,33 +192,41 @@ section #btn:hover{
 }
 
 .sec{
-    background: #fff;
+    background: linear-gradient(to top, #6eb698, #fff);
     position: relative;
     padding: 80px;
 }
 
 .sec h2{
     font-size: 3.5vw;
-    color: #888;
+    color: #0b3201;
     margin-bottom: 10px;
     text-transform: uppercase;
+    font-family: 'Rancho', sans-serif;
 }
 
 .sec h3{
     font-size: 2vw;
-    color: #888;
+    color: #222;
     margin-bottom: 10px;
+    font-family: 'Rancho', sans-serif;
 }
 
 .sec p{
     font-size: 2.2em;
-    color: #888;
+    color: rgb(72, 105, 122);
+    font-family: 'Lobster', cursive;
+}
+
+.sec p span{
+    font-size: 1.2em;
+    color: rgb(72, 105, 122);
+    font-family: 'Lobster', cursive;
 }
 
 .home-para {
-    font-size: 3rem;
-    color: #333;
-    margin: 3rem;
+    font-size: 4.5rem;
+    margin: 5rem;
 }
 
 .big-text {
@@ -219,12 +257,30 @@ section #btn:hover{
 
 /* AHORA HAREMOS EL RESPONSIVO */
 @media (max-width: 991px){
+    
+
+    header .home {
+        font-size: 6vmax;
+    }
+    section #slogan {
+        font-size: 5vmax;
+    }
     .sec{
         padding: 60px;
         grid-template-columns: 1fr;
     }
+    .sec h2{
+        font-size: 5.5vw;
+        font-weight:bold;
+    }
+    .sec h3{
+        font-size: 6vw;
+    }
     .sec p{
-        font-size: 1em;
+        font-size: 1.3em;
+    }
+    .sec p span{
+        font-size: 1.3em;
     }
     header .menulist{
         opacity: 0;
@@ -252,11 +308,13 @@ section #btn:hover{
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
+        filter: brightness(600%);
     }
     header .menu.active{
         background-image: url('./../images/close.svg');
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
+        filter: brightness(600%);
     }
 }

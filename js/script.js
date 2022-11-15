@@ -13,6 +13,7 @@ let persona = document.getElementById('persona')
 
 
 
+
 window.addEventListener('scroll', function(){
     let value = window.scrollY;
     

@@ -10,4 +10,4 @@ Amilson Monção | Meu Portfolio: https://amilsion.github.io/ | Linkedin: https:
 
 ## Prévia
 
-![Imagem](print.png)
+![Imagem](Screenshot_2023-04-12-00-59-54-863-edit_com.android.chrome.jpg)

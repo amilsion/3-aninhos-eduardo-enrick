@@ -7,3 +7,7 @@ Amilson Monção | Meu Portfolio: https://amilsion.github.io/ | Linkedin: https:
 
 ## Visualizar
  https://3-aninhos-eduardo-enrick.netlify.app/ 
+
+## Prévia
+
+![Imagem](print.png)
